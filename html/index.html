@@ -89,6 +89,65 @@
     </div>
   </section>
 
+  <section class="slider-section">
+    <div class="slider-section__container container">
+
+      <div class="slider" id="image-slider">
+        <div class="slider__track-container">
+          <ul class="slider__track" id="slider-track">
+
+            <li class="slider__slide slider__slide--active">
+              <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=80"
+                alt="Estrada asfaltada cercada de pinheiros altos" class="slider__img">
+            </li>
+
+            <li class="slider__slide">
+              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80"
+                alt="Copa de árvores verdes em floresta densa" class="slider__img">
+            </li>
+
+            <li class="slider__slide">
+              <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80"
+                alt="Ponte ou passarela de madeira cercada por vegetação florestal" class="slider__img">
+            </li>
+
+          </ul>
+        </div>
+
+
+        <div class="slider__controls">
+          <!-- Botão Anterior -->
+          <button class="slider__btn slider__btn--prev" id="slider-prev-btn" aria-label="Slide anterior" disabled>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Indicadores (Dots) -->
+          <div class="slider__dots" id="slider-dots">
+            <button class="slider__dot slider__dot--active" aria-label="Ir para o slide 1"
+              data-slide-index="0"></button>
+            <button class="slider__dot" aria-label="Ir para o slide 2" data-slide-index="1"></button>
+            <button class="slider__dot" aria-label="Ir para o slide 3" data-slide-index="2"></button>
+          </div>
+
+          <!-- Botão Próximo -->
+          <button class="slider__btn slider__btn--next" id="slider-next-btn" aria-label="Próximo slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <script src="../js/main.js"></script>
 </body>
 
