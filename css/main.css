@@ -1,1 +1,97 @@
-/* Estilos da landing page */
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis Globais */
+:root {
+  --font-primary: 'Inter', sans-serif;
+
+  /* Cores */
+  --color-bg-dark: #0C0A08;
+  --color-bg-light: #f8fafc;
+  --color-primary: #78B929;
+  /* Verde limão/neon */
+  --color-primary-hover: #64a31e;
+  --color-text-dark: #1e293b;
+  --color-text-light: #f8fafc;
+  --color-text-muted: #64748B;
+  --color-border: #1e293b;
+
+  /* Layout */
+  --container-max-width: 1200px;
+}
+
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container de Layout */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   Footer (Rodapé)
+   ========================================================================== */
+.footer {
+  background-color: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border);
+  padding: 48px 32px;
+  color: var(--color-text-muted);
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer__logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  display: block;
+  height: auto;
+  max-width: 120px;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer__text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+}
