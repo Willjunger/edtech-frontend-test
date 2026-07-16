@@ -227,7 +227,9 @@ body {
    ========================================================================== */
 .video-section {
   background-color: var(--color-bg-light);
-  padding: 64px 0 96px 0;
+  padding: 64px 0 32px 0;
+  /* max-width: 960px; */
+  margin: 0 auto;
 }
 
 .video-section__header {
@@ -261,7 +263,8 @@ body {
   /* Proporção 16:9 */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  /* #00000040 */
   background-color: #000000;
 }
 
@@ -297,7 +300,8 @@ body {
   }
 
   .video-section__header {
-    margin-bottom: 2rem; /* Espaço reduzido entre o texto e o player no mobile */
+    margin-bottom: 2rem;
+    /* Espaço reduzido entre o texto e o player no mobile */
   }
 
   .video-section__title {
@@ -308,6 +312,91 @@ body {
   .video-section__subtitle {
     font-size: 14px;
     line-height: 22px;
+  }
+}
+
+/* ==========================================================================
+   Features Section (Seção de Recursos / Imagem Lateral)
+   ========================================================================== */
+.features {
+  background-color: var(--color-bg-light);
+  padding: 32px 0;
+}
+
+.features__card {
+  background-color: #ffffff;
+  border: 1px solid #F3F4F6;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  /* #0000000D */
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 394px;
+  margin: 0 auto;
+}
+
+.features__image-wrapper {
+  flex: 0 0 412px;
+  max-width: 100%;
+}
+
+.features__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.features__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.features__text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #5C6B48;
+  margin: 0;
+  max-width: 340px;
+}
+
+/* Responsividade da Seção de Recursos */
+@media (max-width: 992px) {
+  .features__card {
+    flex-direction: column;
+    padding: 32px;
+    gap: 32px;
+    min-height: auto;
+    /* Permite altura flexível ao empilhar colunas */
+  }
+
+  .features__image-wrapper,
+  .features__content {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .features {
+    padding: 3rem 0;
+  }
+
+  .features__card {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .features__text {
+    font-size: 15px;
+    line-height: 24px;
   }
 }
 
