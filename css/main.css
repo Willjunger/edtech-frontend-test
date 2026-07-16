@@ -401,6 +401,206 @@ body {
 }
 
 /* ==========================================================================
+   FAQ Section (Perguntas Frequentes)
+   ========================================================================== */
+.faq-section {
+  background-color: var(--color-bg-light);
+  padding: 32px 0;
+}
+
+.faq-section__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-section__title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #0C0A08;
+  margin-bottom: 1rem;
+}
+
+.faq-section__subtitle {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #525252;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.faq-section__container {
+  max-width: 848px;
+}
+
+.faq-accordion {
+  width: 100%;
+}
+
+.faq-item {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-item[open] {
+  background-color: var(--color-primary);
+  /* #76B900 */
+  color: #ffffff;
+}
+
+.faq-item__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  user-select: none;
+  color: #0C0A08;
+  transition: color 0.3s ease;
+}
+
+/* Remove o triângulo padrão do details no WebKit (Chrome/Safari) e Firefox */
+.faq-item__trigger::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item[open] .faq-item__trigger {
+  color: #ffffff;
+}
+
+.faq-item__question {
+  flex: 1;
+  padding-right: 1.5rem;
+}
+
+.faq-item__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #76B900; /* Seta verde por padrão */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item[open] .faq-item__icon-wrapper {
+  color: #ffffff;
+  /* Seta branca quando aberto */
+  transform: rotate(180deg);
+  /* Roda 180 graus quando aberto */
+}
+
+/* Correção para a seta do item 1 que foi desenhada apontando para cima por padrão no HTML */
+#faq-item-1:not([open]) .faq-item__icon-wrapper {
+  transform: rotate(180deg);
+}
+
+#faq-item-1[open] .faq-item__icon-wrapper {
+  transform: rotate(0deg);
+}
+
+.faq-item__icon {
+  display: block;
+}
+
+.faq-item__panel {
+  --faq-pad-top: 20px;
+  --faq-pad-bottom: 24px;
+  border-top: 1px solid rgba(229, 231, 235, 0.5); /* #E5E7EB80 */
+  padding: var(--faq-pad-top) 24px var(--faq-pad-bottom) 24px;
+  overflow: hidden;
+}
+
+.faq-item[open] .faq-item__panel {
+  animation: faqSlideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes faqSlideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    max-height: 250px;
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: var(--faq-pad-top);
+    padding-bottom: var(--faq-pad-bottom);
+  }
+}
+
+.faq-item__text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* Responsividade da Seção FAQ */
+@media (max-width: 992px) {
+  .faq-section__title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-section {
+    padding: 3rem 0;
+  }
+
+  .faq-section__header {
+    margin-bottom: 2rem;
+  }
+
+  .faq-section__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .faq-section__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .faq-item__trigger {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .faq-item__panel {
+    --faq-pad-top: 16px;
+    --faq-pad-bottom: 16px;
+    padding: 16px;
+  }
+
+  .faq-item__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* ==========================================================================
    Footer (Rodapé)
    ========================================================================== */
 .footer {
