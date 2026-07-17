@@ -422,15 +422,69 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
 }
 
+.activity-card--objective {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Figma #0000000D */
+}
+
+/* Aplica a altura do figma apenas quando o alerta de feedback estiver visível na tela */
+.activity-card--objective:has(.activity-feedback:not([style*="display: none"]):not(.hidden)) {
+  min-height: 669.5px;
+}
+
+.activity-card--objective .activity-card__title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #0F172A;
+}
+
+.activity-card--objective .activity-card__description {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #5C6B48;
+}
+
+/* Reset margins for children inside objective card to use the flex gap layout properly */
+.activity-card--objective .activity-card__header {
+  margin-bottom: 0;
+}
+
+.activity-card--objective .activity-card__footer {
+  margin-top: 0;
+}
+
+.activity-card--objective .activity-feedback {
+  margin-top: 0;
+}
+
 .activity-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 2rem;
 }
 
-.activity-card__title-row {
+.activity-card__header-content {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 0.75rem;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .activity-card__icon-wrapper {
@@ -439,9 +493,10 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
-  background-color: rgba(118, 185, 0, 0.15); /* #76B900 a 15% */
+  border-radius: 9999px;
+  background-color: #76B9001A;
   color: #76B900;
+  flex-shrink: 0;
 }
 
 .activity-card__title {
@@ -473,10 +528,14 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 18px 24px;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 894px;
+  min-height: 58px;
+  padding: 16px;
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
   background-color: #ffffff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Figma #0000000D */
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   user-select: none;
@@ -487,6 +546,9 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #334155;
 }
 
 /* Esconde o checkbox nativo */
@@ -511,8 +573,35 @@ body {
 /* Estilização da opção selecionada (ativa) usando :has() */
 .objective-option:has(.objective-option__input:checked) {
   background-color: #0C0A08;
-  border-color: #0C0A08;
+  border: 1px solid #000000;
   color: #ffffff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Figma #0000000D */
+}
+
+.objective-option:has(.objective-option__input:checked) .objective-option__text {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.objective-option:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.objective-option:has(.objective-option__input:checked):hover {
+  background-color: #1E293B;
+  border-color: #1E293B;
+}
+
+/* Keyboard navigation accessibility focus state */
+.objective-option:has(.objective-option__input:focus-visible) {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* Caixa de marcação quando selecionada */
@@ -525,13 +614,14 @@ body {
 .objective-option__input:checked + .objective-option__checkbox-ui::after {
   content: '';
   position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 6px;
-  height: 11px;
-  border: solid #0C0A08; /* Check preto na caixinha branca */
-  border-width: 0 2.5px 2.5px 0;
-  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10.866666793823242px;
+  height: 8.016666412353516px;
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 4.5L4 7L9.5 1.5' stroke='%230C0A08' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Textarea da Atividade Discursiva */
@@ -572,30 +662,34 @@ body {
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  background-color: #0C0A08;
+  color: #FFFFFF;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.activity-card__btn--submit {
-  background-color: var(--color-primary);
-  color: var(--color-bg-dark);
-}
-
-.activity-card__btn--submit:hover:not(:disabled) {
-  background-color: var(--color-primary-hover);
-}
-
 .activity-card__btn--edit {
-  background-color: #0C0A08;
-  color: #ffffff;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #FFFFFF;
+  width: 99.69px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 10px 24px;
 }
 
-.activity-card__btn--edit:hover:not(:disabled) {
-  background-color: #1F2937;
+.activity-card__btn:hover:not(:disabled) {
+  background-color: var(--color-primary); /* #76B900 */
+  color: #FFFFFF;
 }
 
 .activity-card__btn:disabled {
-  background-color: #E5E7EB;
-  color: #9CA3AF;
+  background-color: #F1F5F9;
+  color: #CBD5E1;
   cursor: not-allowed;
 }
 
@@ -606,11 +700,52 @@ body {
   border-radius: 8px;
   margin-top: 2rem;
   font-family: var(--font-primary);
+  animation: feedbackFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes feedbackFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .activity-feedback--warning {
-  background-color: #FEF9C3; /* Amarelo suave */
+  background-color: #FFF9C4;
   color: #713F12;
+  width: 100%;
+  max-width: 894px;
+  min-height: 121.5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10.88px;
+  padding: 16px 24px 24px 24px;
+}
+
+.activity-feedback--warning .activity-feedback__title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #713F12;
+  margin-bottom: 0;
+}
+
+.activity-feedback--warning .activity-feedback__text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22.75px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #713F12E5;
 }
 
 .activity-feedback--success {
@@ -657,6 +792,12 @@ body {
     padding: 24px;
   }
 
+  .activity-card--objective {
+    min-height: auto;
+    padding: 24px;
+    gap: 24px;
+  }
+
   .activity-card__title {
     font-size: 20px;
     line-height: 28px;
@@ -665,6 +806,7 @@ body {
   .objective-option {
     padding: 14px 18px;
     gap: 12px;
+    min-height: auto;
   }
 
   .activity-card__footer {
@@ -674,6 +816,16 @@ body {
 
   .activity-card__btn {
     width: 100%;
+  }
+
+  .activity-card__btn--edit {
+    width: 100%;
+  }
+
+  .activity-feedback--warning {
+    min-height: auto;
+    padding: 16px;
+    gap: 8px;
   }
 }
 
