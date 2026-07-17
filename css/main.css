@@ -9,7 +9,6 @@
   --color-bg-dark: #0C0A08;
   --color-bg-light: #F7F8F5;
   --color-primary: #76B900;
-  /* Verde limão/neon */
   --color-primary-hover: #64a31e;
   --color-text-dark: #1e293b;
   --color-text-light: #f8fafc;
@@ -232,11 +231,13 @@ body {
   margin: 0 auto;
 }
 
-.video-section__header {
+.video-section__header,
+.audio-section__header {
   margin-bottom: 3rem;
 }
 
-.video-section__title {
+.video-section__title,
+.audio-section__title {
   font-family: var(--font-primary);
   font-weight: 900;
   font-size: 48px;
@@ -246,7 +247,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.video-section__subtitle {
+.video-section__subtitle,
+.audio-section__subtitle {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 18px;
@@ -279,37 +281,43 @@ body {
 
 /* Responsividade da Seção de Vídeo */
 @media (max-width: 992px) {
-  .video-section {
+  .video-section,
+  .audio-section {
     padding: 4rem 0;
   }
 
-  .video-section__title {
+  .video-section__title,
+  .audio-section__title {
     font-size: 30px;
     line-height: 38px;
   }
 
-  .video-section__subtitle {
+  .video-section__subtitle,
+  .audio-section__subtitle {
     font-size: 16px;
     line-height: 24px;
   }
 }
 
 @media (max-width: 576px) {
-  .video-section {
+  .video-section,
+  .audio-section {
     padding: 3rem 0;
   }
 
-  .video-section__header {
+  .video-section__header,
+  .audio-section__header {
     margin-bottom: 2rem;
-    /* Espaço reduzido entre o texto e o player no mobile */
   }
 
-  .video-section__title {
+  .video-section__title,
+  .audio-section__title {
     font-size: 24px;
     line-height: 32px;
   }
 
-  .video-section__subtitle {
+  .video-section__subtitle,
+  .audio-section__subtitle {
     font-size: 14px;
     line-height: 22px;
   }
@@ -424,8 +432,8 @@ body {
 
 .activity-card--objective,
 .activity-card--discursive {
-  max-width: 960px;
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -435,7 +443,6 @@ body {
   border: 1px solid #E2E8F0;
   border-radius: 12px;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-  /* Figma #0000000D */
 }
 
 /* Aplica a altura do figma apenas quando o alerta de feedback estiver visível na tela */
@@ -731,7 +738,6 @@ body {
   animation: alertFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Contextual spacing/layout override when alert is used inside an activity card */
 .activity-card .alert {
   max-width: 894px;
 }
@@ -741,6 +747,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -869,6 +876,31 @@ body {
 
   .alert--success {
     min-height: auto;
+  }
+
+  /* Responsividade do Player de Áudio */
+  .audio-player {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .audio-player__volume-slider {
+    display: none; /* Em celulares, o volume é controlado via botões físicos do aparelho */
+  }
+
+  .audio-player__time-display {
+    margin: 0 8px;
+  }
+
+  .audio-player__progress-bar::-webkit-slider-thumb {
+    width: 48px;
+    height: 16px;
+    margin-top: -5px; /* Centraliza verticalmente o thumb menor no trilho */
+  }
+
+  .audio-player__progress-bar::-moz-range-thumb {
+    width: 48px;
+    height: 16px;
   }
 }
 
@@ -1128,4 +1160,206 @@ body {
     text-align: center;
     gap: 1.25rem;
   }
+}
+
+/* ==========================================================================
+   Audio Section (Seção de Áudio)
+   ========================================================================== */
+.audio-section {
+  background-color: var(--color-bg-light);
+  padding: 64px 0 0 0; /* Zerado o padding inferior para aproximar da próxima seção */
+  margin: 0 auto;
+}
+
+.audio-section__container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* ==========================================================================
+   Activities Section (Seção de Atividades)
+   ========================================================================== */
+.activities-section {
+  background-color: var(--color-bg-light);
+  padding: 48px 0 64px 0; /* Aumentado um pouco o padding superior para equilibrar o espaçamento */
+}
+
+.activities-section__container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* Espaço de respiro entre os dois cards de atividades */
+}
+
+/* ==========================================================================
+   Audio Player Component (Player de Áudio Customizado)
+   ========================================================================== */
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.audio-player__play-btn,
+.audio-player__settings-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.audio-player__play-btn:hover,
+.audio-player__settings-btn:hover {
+  color: #0c0a08;
+}
+
+.audio-player__timeline {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.audio-player__time-display {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0 16px;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.audio-player__volume-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.audio-player__volume-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.audio-player__volume-btn:hover {
+  color: #0c0a08;
+}
+
+/* Custom Range Input Styling (Progresso e Volume) */
+.audio-player__progress-bar,
+.audio-player__volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.audio-player__progress-bar:focus,
+.audio-player__volume-slider:focus {
+  outline: none;
+}
+
+/* PROGRESS BAR TRACK */
+.audio-player__progress-bar {
+  width: 100%;
+}
+
+.audio-player__progress-bar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #76B900 0%, #76B900 var(--progress, 55%), #E2E8F0 var(--progress, 55%), #E2E8F0 100%);
+  border-radius: 9999px;
+}
+
+.audio-player__progress-bar::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #76B900 0%, #76B900 var(--progress, 55%), #E2E8F0 var(--progress, 55%), #E2E8F0 100%);
+  border-radius: 9999px;
+}
+
+/* PROGRESS BAR THUMB (CAPSULE STYLE) */
+.audio-player__progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px; /* Centering the 20px thumb on a 6px track */
+  height: 20px;
+  width: 80px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 9999px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.audio-player__progress-bar::-moz-range-thumb {
+  height: 20px;
+  width: 80px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 9999px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* VOLUME SLIDER TRACK */
+.audio-player__volume-slider {
+  width: 60px;
+}
+
+.audio-player__volume-slider::-webkit-slider-runnable-track {
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(to right, #0C0A08 0%, #0C0A08 var(--volume, 70%), #E2E8F0 var(--volume, 70%), #E2E8F0 100%);
+  border-radius: 9999px;
+}
+
+.audio-player__volume-slider::-moz-range-track {
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(to right, #0C0A08 0%, #0C0A08 var(--volume, 70%), #E2E8F0 var(--volume, 70%), #E2E8F0 100%);
+  border-radius: 9999px;
+}
+
+/* VOLUME SLIDER THUMB (ROUND CIRCLE) */
+.audio-player__volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -3px; /* Centering the 12px thumb on a 6px track */
+  height: 12px;
+  width: 12px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.audio-player__volume-slider::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
