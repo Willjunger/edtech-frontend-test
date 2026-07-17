@@ -422,7 +422,8 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
 }
 
-.activity-card--objective {
+.activity-card--objective,
+.activity-card--discursive {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
@@ -433,7 +434,8 @@ body {
   background-color: #ffffff;
   border: 1px solid #E2E8F0;
   border-radius: 12px;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Figma #0000000D */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  /* Figma #0000000D */
 }
 
 /* Aplica a altura do figma apenas quando o alerta de feedback estiver visível na tela */
@@ -441,7 +443,8 @@ body {
   min-height: 669.5px;
 }
 
-.activity-card--objective .activity-card__title {
+.activity-card--objective .activity-card__title,
+.activity-card--discursive .activity-card__title {
   font-family: var(--font-primary);
   font-weight: 700;
   font-size: 20px;
@@ -451,7 +454,8 @@ body {
   color: #0F172A;
 }
 
-.activity-card--objective .activity-card__description {
+.activity-card--objective .activity-card__description,
+.activity-card--discursive .activity-card__description {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 18px;
@@ -461,16 +465,19 @@ body {
   color: #5C6B48;
 }
 
-/* Reset margins for children inside objective card to use the flex gap layout properly */
-.activity-card--objective .activity-card__header {
+/* Reset margins for children inside objective/discursive cards to use the flex gap layout properly */
+.activity-card--objective .activity-card__header,
+.activity-card--discursive .activity-card__header {
   margin-bottom: 0;
 }
 
-.activity-card--objective .activity-card__footer {
+.activity-card--objective .activity-card__footer,
+.activity-card--discursive .activity-card__footer {
   margin-top: 0;
 }
 
-.activity-card--objective .activity-feedback {
+.activity-card--objective .activity-feedback,
+.activity-card--discursive .activity-feedback {
   margin-top: 0;
 }
 
@@ -535,7 +542,8 @@ body {
   border: 1px solid #E2E8F0;
   border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Figma #0000000D */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  /* Figma #0000000D */
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   user-select: none;
@@ -575,7 +583,8 @@ body {
   background-color: #0C0A08;
   border: 1px solid #000000;
   color: #ffffff;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Figma #0000000D */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  /* Figma #0000000D */
 }
 
 .objective-option:has(.objective-option__input:checked) .objective-option__text {
@@ -605,13 +614,13 @@ body {
 }
 
 /* Caixa de marcação quando selecionada */
-.objective-option__input:checked + .objective-option__checkbox-ui {
+.objective-option__input:checked+.objective-option__checkbox-ui {
   border-color: #ffffff;
   background-color: #ffffff;
 }
 
 /* Ícone de check interno da opção selecionada */
-.objective-option__input:checked + .objective-option__checkbox-ui::after {
+.objective-option__input:checked+.objective-option__checkbox-ui::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -624,24 +633,42 @@ body {
   background-size: contain;
 }
 
+.activity-card--discursive .activity-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Textarea da Atividade Discursiva */
 .activity-card__textarea {
   width: 100%;
-  min-height: 150px;
-  padding: 16px;
-  border: 1px solid #D1D5DB;
+  max-width: 894px;
+  height: 160px;
+  min-height: 160px;
+  padding: 12px 16px;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   font-family: var(--font-primary);
   font-size: 16px;
   line-height: 24px;
   color: #1F2937;
-  resize: vertical;
+  resize: none;
   transition: border-color 0.2s ease;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 2px #E2E8F0, inset 0px 0px 0px 1px #FFFFFF;
 }
 
 .activity-card__textarea:focus {
   border-color: var(--color-primary);
   outline: none;
+}
+
+.activity-card__textarea::placeholder {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #94A3B8;
 }
 
 /* Rodapé do Card e Botões */
@@ -683,7 +710,8 @@ body {
 }
 
 .activity-card__btn:hover:not(:disabled) {
-  background-color: var(--color-primary); /* #76B900 */
+  background-color: var(--color-primary);
+  /* #76B900 */
   color: #FFFFFF;
 }
 
@@ -708,6 +736,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -749,8 +778,38 @@ body {
 }
 
 .activity-feedback--success {
-  background-color: #DCFCE7; /* Verde suave */
+  background-color: #E8F5E9;
+  border: 1px solid #DCFCE7;
   color: #14532D;
+  width: 100%;
+  max-width: 894px;
+  min-height: 111.5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6.88px;
+  padding: 16px;
+}
+
+.activity-feedback--success .activity-feedback__title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #14532D;
+  margin-bottom: 0;
+}
+
+.activity-feedback--success .activity-feedback__text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22.75px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #166534;
 }
 
 .activity-feedback__title {
@@ -792,7 +851,8 @@ body {
     padding: 24px;
   }
 
-  .activity-card--objective {
+  .activity-card--objective,
+  .activity-card--discursive {
     min-height: auto;
     padding: 24px;
     gap: 24px;
@@ -826,6 +886,10 @@ body {
     min-height: auto;
     padding: 16px;
     gap: 8px;
+  }
+
+  .activity-feedback--success {
+    min-height: auto;
   }
 }
 
@@ -922,7 +986,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #76B900; /* Seta verde por padrão */
+  color: #76B900;
+  /* Seta verde por padrão */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -949,7 +1014,8 @@ body {
 .faq-item__panel {
   --faq-pad-top: 20px;
   --faq-pad-bottom: 24px;
-  border-top: 1px solid rgba(229, 231, 235, 0.5); /* #E5E7EB80 */
+  border-top: 1px solid rgba(229, 231, 235, 0.5);
+  /* #E5E7EB80 */
   padding: var(--faq-pad-top) 24px var(--faq-pad-bottom) 24px;
   overflow: hidden;
 }
@@ -966,6 +1032,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
   }
+
   to {
     max-height: 250px;
     opacity: 1;
