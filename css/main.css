@@ -726,12 +726,9 @@ details summary:focus-visible {
 
 /* Card selecionado / expandido */
 .interactive-card--expanded {
-  width: 319.2px;
-  height: 336px;
-  min-height: 336px;
   background-color: #0C0A08;
   border-color: #0C0A08;
-  transform: translateY(-8px);
+  transform: scale(1.05) translateY(-8px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   gap: 1.52px;
   z-index: 10;
