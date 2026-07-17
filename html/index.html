@@ -4,7 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EdTech</title>
+  <title>EdTech - Plataforma de Aprendizado Interativo</title>
+  <meta name="description" content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://edtech.dotdigitalgroup.com.br">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edtech.dotdigitalgroup.com.br">
+  <meta property="og:title" content="EdTech - Plataforma de Aprendizado Interativo">
+  <meta property="og:description" content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
+  <meta property="og:image" content="../assets/marca.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://edtech.dotdigitalgroup.com.br">
+  <meta property="twitter:title" content="EdTech - Plataforma de Aprendizado Interativo">
+  <meta property="twitter:description" content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
+  <meta property="twitter:image" content="../assets/marca.png">
+
   <link rel="stylesheet" href="../css/main.css">
 </head>
 
@@ -38,6 +58,8 @@
       </div>
     </div>
   </header>
+
+  <main>
 
   <section class="video-section">
     <div class="video-section__container container">
@@ -331,6 +353,7 @@
         </div>
 
         <div class="activity-card__body">
+          <label for="discursive-response" class="sr-only">Digite sua resposta discursiva</label>
           <textarea id="discursive-response" class="activity-card__textarea"
             placeholder="Digite sua resposta aqui..."></textarea>
         </div>
@@ -376,37 +399,40 @@
         </div>
 
         <div class="activity-card__body">
-          <div class="objective-options">
+          <fieldset class="objective-fieldset">
+            <legend class="sr-only">Opções de resposta para a atividade objetiva</legend>
+            <div class="objective-options">
 
-            <label class="objective-option" for="opt-a">
-              <input type="checkbox" id="opt-a" class="objective-option__input" value="A">
-              <span class="objective-option__checkbox-ui"></span>
-              <span class="objective-option__text">A) Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.</span>
-            </label>
+              <label class="objective-option" for="opt-a">
+                <input type="checkbox" id="opt-a" class="objective-option__input" value="A">
+                <span class="objective-option__checkbox-ui"></span>
+                <span class="objective-option__text">A) Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.</span>
+              </label>
 
-            <label class="objective-option" for="opt-b">
-              <input type="checkbox" id="opt-b" class="objective-option__input" value="B">
-              <span class="objective-option__checkbox-ui"></span>
-              <span class="objective-option__text">B) Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.</span>
-            </label>
+              <label class="objective-option" for="opt-b">
+                <input type="checkbox" id="opt-b" class="objective-option__input" value="B">
+                <span class="objective-option__checkbox-ui"></span>
+                <span class="objective-option__text">B) Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.</span>
+              </label>
 
-            <label class="objective-option" for="opt-c">
-              <input type="checkbox" id="opt-c" class="objective-option__input" value="C">
-              <span class="objective-option__checkbox-ui"></span>
-              <span class="objective-option__text">C) Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.</span>
-            </label>
+              <label class="objective-option" for="opt-c">
+                <input type="checkbox" id="opt-c" class="objective-option__input" value="C">
+                <span class="objective-option__checkbox-ui"></span>
+                <span class="objective-option__text">C) Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.</span>
+              </label>
 
-            <label class="objective-option" for="opt-d">
-              <input type="checkbox" id="opt-d" class="objective-option__input" value="D">
-              <span class="objective-option__checkbox-ui"></span>
-              <span class="objective-option__text">D) Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.</span>
-            </label>
+              <label class="objective-option" for="opt-d">
+                <input type="checkbox" id="opt-d" class="objective-option__input" value="D">
+                <span class="objective-option__checkbox-ui"></span>
+                <span class="objective-option__text">D) Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.</span>
+              </label>
 
-          </div>
+            </div>
+          </fieldset>
         </div>
 
         <div class="activity-card__footer">
@@ -537,6 +563,8 @@
 
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="footer__container container">
