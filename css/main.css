@@ -281,6 +281,7 @@ body {
 
 /* Responsividade da Seção de Vídeo */
 @media (max-width: 992px) {
+
   .video-section,
   .audio-section {
     padding: 4rem 0;
@@ -300,6 +301,7 @@ body {
 }
 
 @media (max-width: 576px) {
+
   .video-section,
   .audio-section {
     padding: 3rem 0;
@@ -405,6 +407,269 @@ body {
   .features__text {
     font-size: 15px;
     line-height: 24px;
+  }
+}
+
+/* ==========================================================================
+   Highlight Section (Destaque Centralizado)
+   ========================================================================== */
+.highlight-section {
+  background-color: var(--color-bg-light);
+  padding: 64px 0 48px 0;
+}
+
+.highlight-section__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight-box {
+  width: 100%;
+  max-width: 784px;
+  min-height: 240px;
+  background-color: #1A1A1A;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 48px;
+  box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box__text {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29.25px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #FFFFFF;
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .highlight-section {
+    padding: 40px 0 24px 0;
+  }
+
+  .highlight-box {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .highlight-box__text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+/* ==========================================================================
+   Interactive Cards Section (Cards Interativos)
+   ========================================================================== */
+.cards-section {
+  background-color: var(--color-bg-light);
+  padding: 32px 0 32px 0;
+  /* Reduzido padding superior para aproximar do highlight */
+}
+
+.cards-section__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive-cards-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  /* Reduzido de 32px para 24px para caberem os 3 cards lado a lado no container */
+  flex-wrap: nowrap;
+  /* Mantém os 3 cards rigorosamente lado a lado na mesma linha em telas grandes */
+  width: 100%;
+  max-width: 1024px;
+  /* Mesmo espaço máximo de conteúdo que a seção de vídeo */
+}
+
+/* Card base - Estado não selecionado */
+.interactive-card {
+  width: 304px;
+  height: 320px;
+  min-height: 320px;
+  border-radius: 8px;
+  padding: 34px;
+  background-color: #F9FAFB;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  /* Figma #0000000D */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+}
+
+/* Card Body */
+.interactive-card__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Placeholder ? no estado não expandido */
+.interactive-card__placeholder {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #1E293B;
+  margin: auto 0;
+  user-select: none;
+}
+
+/* Conteúdo do card quando oculto */
+.interactive-card:not(.interactive-card--expanded) .interactive-card__expanded-content {
+  display: none;
+}
+
+/* Card selecionado / expandido */
+.interactive-card--expanded {
+  width: 319.2px;
+  height: 336px;
+  min-height: 336px;
+  background-color: #0C0A08;
+  border-color: #0C0A08;
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  gap: 1.52px;
+  z-index: 10;
+}
+
+.interactive-card--expanded .interactive-card__placeholder {
+  display: none;
+}
+
+.interactive-card--expanded .interactive-card__expanded-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.interactive-card__text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #D1D5DB;
+  margin: 0;
+}
+
+/* Footer do card */
+.interactive-card__footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* Botão Abrir / Fechar */
+.interactive-card__btn {
+  width: 102.9px;
+  height: 42px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 8px 32px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #334155;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.interactive-card__btn:hover {
+  background-color: #F9FAFB;
+  border-color: #D1D5DB;
+  color: #0F172A;
+}
+
+.interactive-card--expanded .interactive-card__btn {
+  width: 129.3px;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #4B5563;
+  border-radius: 4px;
+  padding: 8px 32px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.interactive-card--expanded .interactive-card__btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #9CA3AF;
+}
+
+@media (max-width: 1024px) {
+  .interactive-cards-grid {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    padding: 40px 0;
+  }
+
+  .interactive-cards-grid {
+    gap: 24px;
+  }
+
+  .interactive-card {
+    width: 100%;
+    max-width: 320px;
+    /* Mantém os cards confortáveis no mobile */
+  }
+
+  .interactive-card--expanded {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    min-height: auto;
+    transform: none;
+    /* Reseta o deslocamento no mobile */
   }
 }
 
@@ -540,7 +805,7 @@ body {
   align-items: center;
   gap: 16px;
   width: 100%;
-  max-width: 894px;
+  max-width: 100%;
   min-height: 58px;
   padding: 16px;
   border: 1px solid #E2E8F0;
@@ -645,7 +910,7 @@ body {
 /* Textarea da Atividade Discursiva */
 .activity-card__textarea {
   width: 100%;
-  max-width: 894px;
+  max-width: 100%;
   height: 160px;
   min-height: 160px;
   padding: 12px 16px;
@@ -739,7 +1004,7 @@ body {
 }
 
 .activity-card .alert {
-  max-width: 894px;
+  max-width: 100%;
 }
 
 @keyframes alertFadeIn {
@@ -885,7 +1150,8 @@ body {
   }
 
   .audio-player__volume-slider {
-    display: none; /* Em celulares, o volume é controlado via botões físicos do aparelho */
+    display: none;
+    /* Em celulares, o volume é controlado via botões físicos do aparelho */
   }
 
   .audio-player__time-display {
@@ -895,7 +1161,8 @@ body {
   .audio-player__progress-bar::-webkit-slider-thumb {
     width: 48px;
     height: 16px;
-    margin-top: -5px; /* Centraliza verticalmente o thumb menor no trilho */
+    margin-top: -5px;
+    /* Centraliza verticalmente o thumb menor no trilho */
   }
 
   .audio-player__progress-bar::-moz-range-thumb {
@@ -1045,7 +1312,7 @@ body {
   }
 
   to {
-    max-height: 250px;
+    max-height: 1000px; /* Aumentado de 250px para 1000px para permitir que textos longos expandam e caibam inteiros na tela */
     opacity: 1;
     transform: translateY(0);
     padding-top: var(--faq-pad-top);
@@ -1167,7 +1434,7 @@ body {
    ========================================================================== */
 .audio-section {
   background-color: var(--color-bg-light);
-  padding: 64px 0 0 0; /* Zerado o padding inferior para aproximar da próxima seção */
+  padding: 32px 0 32px 0;
   margin: 0 auto;
 }
 
@@ -1183,13 +1450,15 @@ body {
    ========================================================================== */
 .activities-section {
   background-color: var(--color-bg-light);
-  padding: 48px 0 64px 0; /* Aumentado um pouco o padding superior para equilibrar o espaçamento */
+  padding: 48px 0 64px 0;
+  /* Aumentado um pouco o padding superior para equilibrar o espaçamento */
 }
 
 .activities-section__container {
   display: flex;
   flex-direction: column;
-  gap: 48px; /* Espaço de respiro entre os dois cards de atividades */
+  gap: 48px;
+  /* Espaço de respiro entre os dois cards de atividades */
 }
 
 /* ==========================================================================
@@ -1303,7 +1572,8 @@ body {
 .audio-player__progress-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  margin-top: -7px; /* Centering the 20px thumb on a 6px track */
+  margin-top: -7px;
+  /* Centering the 20px thumb on a 6px track */
   height: 20px;
   width: 80px;
   background-color: #FFFFFF;
@@ -1345,7 +1615,8 @@ body {
 .audio-player__volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  margin-top: -3px; /* Centering the 12px thumb on a 6px track */
+  margin-top: -3px;
+  /* Centering the 12px thumb on a 6px track */
   height: 12px;
   width: 12px;
   background-color: #FFFFFF;
