@@ -5,28 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EdTech - Plataforma de Aprendizado Interativo</title>
-  <meta name="description" content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
+  <meta name="description"
+    content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
   <meta name="robots" content="index, follow">
-  
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://edtech.dotdigitalgroup.com.br">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://edtech.dotdigitalgroup.com.br">
-  <meta property="og:title" content="EdTech - Plataforma de Aprendizado Interativo">
-  <meta property="og:description" content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
-  <meta property="og:image" content="../assets/marca.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://edtech.dotdigitalgroup.com.br">
-  <meta property="twitter:title" content="EdTech - Plataforma de Aprendizado Interativo">
-  <meta property="twitter:description" content="EdTech - Uma plataforma moderna de aprendizagem interativa com vídeos, áudios e atividades interativas.">
-  <meta property="twitter:image" content="../assets/marca.png">
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper CSS (Local) -->
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
 
   <link rel="stylesheet" href="../css/main.css">
 </head>
@@ -64,506 +48,517 @@
 
   <main>
 
-  <section class="video-section">
-    <div class="video-section__container container">
+    <section class="video-section">
+      <div class="video-section__container container">
 
-      <div class="video-section__header">
-        <h2 class="video-section__title">
-          Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit
-        </h2>
-        <p class="video-section__subtitle">
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking
-          at its layout.
-        </p>
-      </div>
-
-      <div class="video-section__player-wrapper">
-        <div class="video-player" id="youtube-player-container">
-
-          <iframe width="1337" height="752" src="https://www.youtube.com/embed/DeQ9CgfPgtI"
-            title="MUNDO LINDO | Os lugares mais bonitos do planeta" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="features__container container">
-      <div class="features__card">
-
-        <div class="features__image-wrapper">
-          <img src="../assets/NatureWavesCrashing.png" alt="Onda quebrando no oceano" class="features__img">
-        </div>
-
-        <div class="features__content">
-          <p class="features__text">
+        <div class="video-section__header">
+          <h2 class="video-section__title">
             Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Impedit voluptatum
-            voluptatibus aperiam cum quasi repudiandae
-            nostrum, sed amet quam maiores eum
-            consectetur ipsa dolores quis ducimus, iusto
-            dicta consequuntur facere!
-          </p>
-          <p class="features__text">
-            Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Molestiae, quia! Cumque
-            ipsum harum fuga perferendis autem
-            incidunt dolorem voluptatum illo, quis
-            explicabo. Possimus repudiandae dolore
-            architecto, hic dolorum ab.
+            adipisicing elit
+          </h2>
+          <p class="video-section__subtitle">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout.
           </p>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <div class="video-section__player-wrapper">
+          <div class="video-player" id="youtube-player-container">
 
-  <section class="slider-section">
-    <div class="slider-section__container container">
+            <iframe width="1337" height="752" src="https://www.youtube.com/embed/DeQ9CgfPgtI"
+              title="MUNDO LINDO | Os lugares mais bonitos do planeta" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-      <div class="slider" id="image-slider">
-        <!-- Adicionada a classe swiper para integração com Swiper -->
-        <div class="slider__track-container swiper">
-          <!-- Adicionada a classe swiper-wrapper -->
-          <ul class="slider__track swiper-wrapper" id="slider-track">
-
-            <!-- Adicionada a classe swiper-slide -->
-            <li class="slider__slide swiper-slide">
-              <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=80"
-                alt="Estrada asfaltada cercada de pinheiros altos" class="slider__img">
-            </li>
-
-            <li class="slider__slide swiper-slide">
-              <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80"
-                alt="Copa de árvores verdes em floresta densa" class="slider__img">
-            </li>
-
-            <li class="slider__slide swiper-slide">
-              <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80"
-                alt="Ponte ou passarela de madeira cercada por vegetação florestal" class="slider__img">
-            </li>
-
-          </ul>
-        </div>
-
-
-        <div class="slider__controls">
-          <!-- Botão Anterior -->
-          <button class="slider__btn slider__btn--prev" id="slider-prev-btn" aria-label="Slide anterior" disabled>
-            <svg width="4.32" height="7" viewBox="0 0 4.32 7" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true">
-              <path d="M3.72 0.6L0.6 3.5L3.72 6.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-
-          <!-- Indicadores (Dots) - Serão renderizados dinamicamente pelo Swiper -->
-          <div class="slider__dots" id="slider-dots"></div>
-
-          <!-- Botão Próximo -->
-          <button class="slider__btn slider__btn--next" id="slider-next-btn" aria-label="Próximo slide">
-            <svg width="4.32" height="7" viewBox="0 0 4.32 7" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true">
-              <path d="M0.6 0.6L3.72 3.5L0.6 6.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="highlight-section">
-    <div class="highlight-section__container container">
-      <div class="highlight-box">
-        <p class="highlight-box__text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore nihil corporis
-          suscipit soluta dolorem id consectetur, tenetur nesciunt ducimus maiores sequi
-          veritatis nostrum, esse eaque delectus ea laboriosam repellendus! Ipsum nobis,
-          mollitia facilis praesentium cupiditate quidem eaque itaque nulla ab obcaecati
-          sapiente sequi porro, totam, non molestias excepturi explicabo adipisci deleniti
-          architecto animi!
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cards-section">
-    <div class="cards-section__container container">
-      <div class="interactive-cards-grid">
-
-        <!-- Card 1 -->
-        <div class="interactive-card" id="card-1">
-          <div class="interactive-card__body">
-            <div class="interactive-card__placeholder">?</div>
-            <div class="interactive-card__expanded-content" aria-hidden="true">
-              <p class="interactive-card__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi error at, voluptatibus
-                magnam reiciendis.
-              </p>
-            </div>
-          </div>
-          <div class="interactive-card__footer">
-            <button class="interactive-card__btn" aria-expanded="false" data-card-id="1">Abrir</button>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="interactive-card interactive-card--expanded" id="card-2">
-          <div class="interactive-card__body">
-            <div class="interactive-card__placeholder">?</div>
-            <div class="interactive-card__expanded-content" aria-hidden="false">
-              <p class="interactive-card__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi, dolores perspiciatis commodi
-                eum dolore nesciunt tempore similique at quas.
-              </p>
-            </div>
-          </div>
-          <div class="interactive-card__footer">
-            <button class="interactive-card__btn" aria-expanded="true" data-card-id="2">Fechar</button>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="interactive-card" id="card-3">
-          <div class="interactive-card__body">
-            <div class="interactive-card__placeholder">?</div>
-            <div class="interactive-card__expanded-content" aria-hidden="true">
-              <p class="interactive-card__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi error at, voluptatibus
-                magnam reiciendis.
-              </p>
-            </div>
-          </div>
-          <div class="interactive-card__footer">
-            <button class="interactive-card__btn" aria-expanded="false" data-card-id="3">Abrir</button>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="audio-section">
-    <div class="audio-section__container container">
-      <div class="audio-section__header">
-        <h2 class="audio-section__title">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit
-        </h2>
-        <p class="audio-section__subtitle">
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking
-          at its layout.
-        </p>
-      </div>
+    <section class="features">
+      <div class="features__container container">
+        <div class="features__card">
 
-      <div class="audio-player-container">
-        <audio id="native-audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-
-        <div class="audio-player">
-          <!-- Botão Play/Pause -->
-          <button class="audio-player__play-btn" id="audio-play-btn" aria-label="Reproduzir áudio">
-            <!-- Ícone Play -->
-            <svg class="audio-player__icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M7 4L19 12L7 20V4Z" stroke="#475569" stroke-width="2" stroke-linejoin="round" fill="none" />
-            </svg>
-            <!-- Ícone Pause (oculto inicialmente) -->
-            <svg class="audio-player__icon-pause" style="display: none;" width="20" height="20" viewBox="0 0 24 24"
-              fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="6" y="4" width="3" height="16" rx="1.5" fill="#475569" />
-              <rect x="15" y="4" width="3" height="16" rx="1.5" fill="#475569" />
-            </svg>
-          </button>
-
-          <!-- Barra de Progresso (Timeline) -->
-          <div class="audio-player__timeline">
-            <input type="range" class="audio-player__progress-bar" id="audio-progress" min="0" value="0" max="100"
-              aria-label="Progresso do áudio">
+          <div class="features__image-wrapper">
+            <img src="../assets/NatureWavesCrashing.png" alt="Onda quebrando no oceano" class="features__img">
           </div>
 
-          <!-- Exibição de Tempo -->
-          <span class="audio-player__time-display" id="audio-time">03:03</span>
+          <div class="features__content">
+            <p class="features__text">
+              Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Impedit voluptatum
+              voluptatibus aperiam cum quasi repudiandae
+              nostrum, sed amet quam maiores eum
+              consectetur ipsa dolores quis ducimus, iusto
+              dicta consequuntur facere!
+            </p>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Molestiae, quia! Cumque
+              ipsum harum fuga perferendis autem
+              incidunt dolorem voluptatum illo, quis
+              explicabo. Possimus repudiandae dolore
+              architecto, hic dolorum ab.
+            </p>
+          </div>
 
-          <!-- Controle de Volume -->
-          <div class="audio-player__volume-control">
-            <button class="audio-player__volume-btn" id="audio-volume-btn" aria-label="Mudar volume">
-              <!-- Ícone Volume -->
-              <svg class="audio-player__icon-volume" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="#475569" stroke-width="2" stroke-linejoin="round"
-                  fill="none" />
-                <path d="M15.5 8.5C16.5 9.5 17 10.7 17 12C17 13.3 16.5 14.5 15.5 15.5" stroke="#475569" stroke-width="2"
-                  stroke-linecap="round" />
-              </svg>
-              <!-- Ícone Mute (oculto inicialmente) -->
-              <svg class="audio-player__icon-mute" style="display: none;" width="20" height="20" viewBox="0 0 24 24"
-                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path
-                  d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
-                  fill="#475569" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slider-section">
+      <div class="slider-section__container container">
+
+        <div class="slider" id="image-slider">
+          <!-- Adicionada a classe swiper para integração com Swiper -->
+          <div class="slider__track-container swiper">
+            <!-- Adicionada a classe swiper-wrapper -->
+            <ul class="slider__track swiper-wrapper" id="slider-track">
+
+              <!-- Adicionada a classe swiper-slide -->
+              <li class="slider__slide swiper-slide">
+                <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=80"
+                  alt="Estrada asfaltada cercada de pinheiros altos" class="slider__img">
+              </li>
+
+              <li class="slider__slide swiper-slide">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80"
+                  alt="Copa de árvores verdes em floresta densa" class="slider__img">
+              </li>
+
+              <li class="slider__slide swiper-slide">
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80"
+                  alt="Ponte ou passarela de madeira cercada por vegetação florestal" class="slider__img">
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div class="slider__controls">
+            <!-- Botão Anterior -->
+            <button class="slider__btn slider__btn--prev" id="slider-prev-btn" aria-label="Slide anterior" disabled>
+              <svg width="4.32" height="7" viewBox="0 0 4.32 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M3.72 0.6L0.6 3.5L3.72 6.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
             </button>
-            <input type="range" class="audio-player__volume-slider" id="audio-volume" min="0" max="100" value="80"
-              aria-label="Ajustar volume">
-          </div>
 
-          <!-- Botão Configurações -->
-          <button class="audio-player__settings-btn" id="audio-settings-btn" aria-label="Configurações">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-            </svg>
-          </button>
-        </div>
-      </div>
+            <!-- Indicadores (Dots) - Serão renderizados dinamicamente pelo Swiper -->
+            <div class="slider__dots" id="slider-dots"></div>
 
-    </div>
-  </section>
-
-  <section class="activities-section">
-    <div class="activities-section__container container">
-
-      <!-- Atividade Discursiva -->
-      <div class="activity-card activity-card--discursive" id="discursive-activity">
-        <div class="activity-card__header">
-          <span class="activity-card__icon-wrapper">
-            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true">
-              <path
-                d="M0 10V8H7V10H0ZM0 6V4H11V6H0ZM0 2V0H11V2H0ZM9 16V12.925L14.525 7.425C14.675 7.275 14.8417 7.16667 15.025 7.1C15.2083 7.03333 15.3917 7 15.575 7C15.775 7 15.9667 7.0375 16.15 7.1125C16.3333 7.1875 16.5 7.3 16.65 7.45L17.575 8.375C17.7083 8.525 17.8125 8.69167 17.8875 8.875C17.9625 9.05833 18 9.24167 18 9.425C18 9.60833 17.9667 9.79583 17.9 9.9875C17.8333 10.1792 17.725 10.35 17.575 10.5L12.075 16H9ZM15.575 10.4L16.5 9.425L15.575 8.5L14.625 9.45L15.575 10.4Z"
-                fill="currentColor" />
-            </svg>
-          </span>
-          <div class="activity-card__header-content">
-            <h3 class="activity-card__title">Atividade discursiva</h3>
-            <p class="activity-card__description">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking
-              at its layout.
-            </p>
-          </div>
-        </div>
-
-        <div class="activity-card__body">
-          <label for="discursive-response" class="sr-only">Digite sua resposta discursiva</label>
-          <textarea id="discursive-response" class="activity-card__textarea"
-            placeholder="Digite sua resposta aqui..."></textarea>
-        </div>
-
-        <div class="activity-card__footer">
-          <button class="activity-card__btn activity-card__btn--submit" id="discursive-submit">Responder</button>
-          <button class="activity-card__btn activity-card__btn--edit" id="discursive-edit">Alterar</button>
-        </div>
-
-        <div class="alert alert--success" id="discursive-feedback">
-          <button class="alert__close" id="discursive-feedback-close" aria-label="Fechar feedback">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true">
-              <path d="M1 1L11 11M1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </button>
-          <strong class="alert__title">É isso aí!</strong>
-          <p class="alert__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur commodi odio maiores accusamus aspernatur
-            consequatur ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis labore.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Atividade Objetiva -->
-      <div class="activity-card activity-card--objective" id="objective-activity">
-        <div class="activity-card__header">
-          <span class="activity-card__icon-wrapper">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true">
-              <path
-                d="M12 13C12.2833 13 12.5292 12.8958 12.7375 12.6875C12.9458 12.4792 13.05 12.2333 13.05 11.95C13.05 11.6667 12.9458 11.4208 12.7375 11.2125C12.5292 11.0042 12.2833 10.9 12 10.9C11.7167 10.9 11.4708 11.0042 11.2625 11.2125C11.0542 11.4208 10.95 11.6667 10.95 11.95C10.95 12.2333 11.0542 12.4792 11.2625 12.6875C11.4708 12.8958 11.7167 13 12 13ZM11.25 9.8H12.75C12.75 9.31667 12.8 8.9625 12.9 8.7375C13 8.5125 13.2333 8.21667 13.6 7.85C14.1 7.35 14.4333 6.94583 14.6 6.6375C14.7667 6.32917 14.85 5.96667 14.85 5.55C14.85 4.8 14.5875 4.1875 14.0625 3.7125C13.5375 3.2375 12.85 3 12 3C11.3167 3 10.7208 3.19167 10.2125 3.575C9.70417 3.95833 9.35 4.46667 9.15 5.1L10.5 5.65C10.65 5.23333 10.8542 4.92083 11.1125 4.7125C11.3708 4.50417 11.6667 4.4 12 4.4C12.4 4.4 12.725 4.5125 12.975 4.7375C13.225 4.9625 13.35 5.26667 13.35 5.65C13.35 5.88333 13.2833 6.10417 13.15 6.3125C13.0167 6.52083 12.7833 6.78333 12.45 7.1C11.9 7.58333 11.5625 7.9625 11.4375 8.2375C11.3125 8.5125 11.25 9.03333 11.25 9.8ZM6 16C5.45 16 4.97917 15.8042 4.5875 15.4125C4.19583 15.0208 4 14.55 4 14V2C4 1.45 4.19583 0.979167 4.5875 0.5875C4.97917 0.195833 5.45 0 6 0H18C18.55 0 19.0208 0.195833 19.4125 0.5875C19.8042 0.979167 20 1.45 20 2V14C20 14.55 19.8042 15.0208 19.4125 15.4125C19.0208 15.8042 18.55 16 18 16H6ZM2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4H2V18H16V20H2Z"
-                fill="currentColor" />
-            </svg>
-          </span>
-          <div class="activity-card__header-content">
-            <h3 class="activity-card__title">Atividade Objetiva</h3>
-            <p class="activity-card__description">
-              It is a long established fact that a reader will be distracted by the readable content of a page.
-            </p>
-          </div>
-        </div>
-
-        <div class="activity-card__body">
-          <fieldset class="objective-fieldset">
-            <legend class="sr-only">Opções de resposta para a atividade objetiva</legend>
-            <div class="objective-options">
-
-              <label class="objective-option" for="opt-a">
-                <input type="checkbox" id="opt-a" class="objective-option__input" value="A">
-                <span class="objective-option__checkbox-ui"></span>
-                <span class="objective-option__text">A) Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.</span>
-              </label>
-
-              <label class="objective-option" for="opt-b">
-                <input type="checkbox" id="opt-b" class="objective-option__input" value="B">
-                <span class="objective-option__checkbox-ui"></span>
-                <span class="objective-option__text">B) Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.</span>
-              </label>
-
-              <label class="objective-option" for="opt-c">
-                <input type="checkbox" id="opt-c" class="objective-option__input" value="C">
-                <span class="objective-option__checkbox-ui"></span>
-                <span class="objective-option__text">C) Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.</span>
-              </label>
-
-              <label class="objective-option" for="opt-d">
-                <input type="checkbox" id="opt-d" class="objective-option__input" value="D">
-                <span class="objective-option__checkbox-ui"></span>
-                <span class="objective-option__text">D) Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.</span>
-              </label>
-
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="activity-card__footer">
-          <button class="activity-card__btn activity-card__btn--submit" id="objective-submit">Responder</button>
-          <button class="activity-card__btn activity-card__btn--edit" id="objective-edit">Alterar</button>
-        </div>
-
-        <div class="alert alert--warning" id="objective-feedback">
-          <button class="alert__close" id="objective-feedback-close" aria-label="Fechar feedback">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true">
-              <path d="M1 1L11 11M1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </button>
-          <strong class="alert__title">Tente novamente!</strong>
-          <p class="alert__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur commodi odio maiores accusamus aspernatur
-            consequatur ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis labore.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="faq-section">
-    <div class="faq-section__container container">
-
-      <div class="faq-section__header">
-        <h2 class="faq-section__title">Perguntas frequentes</h2>
-        <p class="faq-section__subtitle">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-      </div>
-
-      <div class="faq-accordion" id="faq-accordion">
-        <details class="faq-item" name="faq" open id="faq-item-1">
-          <summary class="faq-item__trigger">
-            <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.</span>
-            <span class="faq-item__icon-wrapper">
-              <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 7L6 2L11 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            <!-- Botão Próximo -->
+            <button class="slider__btn slider__btn--next" id="slider-next-btn" aria-label="Próximo slide">
+              <svg width="4.32" height="7" viewBox="0 0 4.32 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M0.6 0.6L3.72 3.5L0.6 6.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="highlight-section">
+      <div class="highlight-section__container container">
+        <div class="highlight-box">
+          <p class="highlight-box__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore nihil corporis
+            suscipit soluta dolorem id consectetur, tenetur nesciunt ducimus maiores sequi
+            veritatis nostrum, esse eaque delectus ea laboriosam repellendus! Ipsum nobis,
+            mollitia facilis praesentium cupiditate quidem eaque itaque nulla ab obcaecati
+            sapiente sequi porro, totam, non molestias excepturi explicabo adipisci deleniti
+            architecto animi!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-section">
+      <div class="cards-section__container container">
+        <div class="interactive-cards-grid">
+
+          <!-- Card 1 -->
+          <div class="interactive-card" id="card-1">
+            <div class="interactive-card__body">
+              <div class="interactive-card__placeholder">?</div>
+              <div class="interactive-card__expanded-content" aria-hidden="true">
+                <p class="interactive-card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi error at, voluptatibus
+                  magnam reiciendis.
+                </p>
+              </div>
+            </div>
+            <div class="interactive-card__footer">
+              <button class="interactive-card__btn" aria-expanded="false" data-card-id="1">Abrir</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="interactive-card interactive-card--expanded" id="card-2">
+            <div class="interactive-card__body">
+              <div class="interactive-card__placeholder">?</div>
+              <div class="interactive-card__expanded-content" aria-hidden="false">
+                <p class="interactive-card__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi, dolores perspiciatis commodi
+                  eum dolore nesciunt tempore similique at quas.
+                </p>
+              </div>
+            </div>
+            <div class="interactive-card__footer">
+              <button class="interactive-card__btn" aria-expanded="true" data-card-id="2">Fechar</button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="interactive-card" id="card-3">
+            <div class="interactive-card__body">
+              <div class="interactive-card__placeholder">?</div>
+              <div class="interactive-card__expanded-content" aria-hidden="true">
+                <p class="interactive-card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi error at, voluptatibus
+                  magnam reiciendis.
+                </p>
+              </div>
+            </div>
+            <div class="interactive-card__footer">
+              <button class="interactive-card__btn" aria-expanded="false" data-card-id="3">Abrir</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="audio-section">
+      <div class="audio-section__container container">
+        <div class="audio-section__header">
+          <h2 class="audio-section__title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit
+          </h2>
+          <p class="audio-section__subtitle">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout.
+          </p>
+        </div>
+
+        <div class="audio-player-container">
+          <audio id="native-audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+          <div class="audio-player">
+            <!-- Botão Play/Pause -->
+            <button class="audio-player__play-btn" id="audio-play-btn" aria-label="Reproduzir áudio">
+              <!-- Ícone Play -->
+              <svg class="audio-player__icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M7 4L19 12L7 20V4Z" stroke="#475569" stroke-width="2" stroke-linejoin="round" fill="none" />
+              </svg>
+              <!-- Ícone Pause (oculto inicialmente) -->
+              <svg class="audio-player__icon-pause" style="display: none;" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="4" width="3" height="16" rx="1.5" fill="#475569" />
+                <rect x="15" y="4" width="3" height="16" rx="1.5" fill="#475569" />
+              </svg>
+            </button>
+
+            <!-- Barra de Progresso (Timeline) -->
+            <div class="audio-player__timeline">
+              <input type="range" class="audio-player__progress-bar" id="audio-progress" min="0" value="0" max="100"
+                aria-label="Progresso do áudio">
+            </div>
+
+            <!-- Exibição de Tempo -->
+            <span class="audio-player__time-display" id="audio-time">03:03</span>
+
+            <!-- Controle de Volume -->
+            <div class="audio-player__volume-control">
+              <button class="audio-player__volume-btn" id="audio-volume-btn" aria-label="Mudar volume">
+                <!-- Ícone Volume -->
+                <svg class="audio-player__icon-volume" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="#475569" stroke-width="2" stroke-linejoin="round"
+                    fill="none" />
+                  <path d="M15.5 8.5C16.5 9.5 17 10.7 17 12C17 13.3 16.5 14.5 15.5 15.5" stroke="#475569"
+                    stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <!-- Ícone Mute (oculto inicialmente) -->
+                <svg class="audio-player__icon-mute" style="display: none;" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+                    fill="#475569" />
+                </svg>
+              </button>
+              <input type="range" class="audio-player__volume-slider" id="audio-volume" min="0" max="100" value="80"
+                aria-label="Ajustar volume">
+            </div>
+
+            <!-- Botão Configurações -->
+            <button class="audio-player__settings-btn" id="audio-settings-btn" aria-label="Configurações">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="activities-section">
+      <div class="activities-section__container container">
+
+        <!-- Atividade Discursiva -->
+        <div class="activity-card activity-card--discursive" id="discursive-activity">
+          <div class="activity-card__header">
+            <span class="activity-card__icon-wrapper">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M0 10V8H7V10H0ZM0 6V4H11V6H0ZM0 2V0H11V2H0ZM9 16V12.925L14.525 7.425C14.675 7.275 14.8417 7.16667 15.025 7.1C15.2083 7.03333 15.3917 7 15.575 7C15.775 7 15.9667 7.0375 16.15 7.1125C16.3333 7.1875 16.5 7.3 16.65 7.45L17.575 8.375C17.7083 8.525 17.8125 8.69167 17.8875 8.875C17.9625 9.05833 18 9.24167 18 9.425C18 9.60833 17.9667 9.79583 17.9 9.9875C17.8333 10.1792 17.725 10.35 17.575 10.5L12.075 16H9ZM15.575 10.4L16.5 9.425L15.575 8.5L14.625 9.45L15.575 10.4Z"
+                  fill="currentColor" />
+              </svg>
             </span>
-          </summary>
-          <div class="faq-item__panel" id="faq-answer-1">
-            <div class="faq-item__content">
-              <p class="faq-item__text">
+            <div class="activity-card__header-content">
+              <h3 class="activity-card__title">Atividade discursiva</h3>
+              <p class="activity-card__description">
                 It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                looking
+                at its layout.
               </p>
             </div>
           </div>
-        </details>
 
-        <details class="faq-item" name="faq" id="faq-item-2">
-          <summary class="faq-item__trigger">
-            <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.</span>
-            <span class="faq-item__icon-wrapper">
-              <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
+          <div class="activity-card__body">
+            <label for="discursive-response" class="sr-only">Digite sua resposta discursiva</label>
+            <textarea id="discursive-response" class="activity-card__textarea"
+              placeholder="Digite sua resposta aqui..."></textarea>
+          </div>
+
+          <div class="activity-card__footer">
+            <button class="activity-card__btn activity-card__btn--submit" id="discursive-submit">Responder</button>
+            <button class="activity-card__btn activity-card__btn--edit" id="discursive-edit">Alterar</button>
+          </div>
+
+          <div class="alert alert--success" id="discursive-feedback">
+            <button class="alert__close" id="discursive-feedback-close" aria-label="Fechar feedback">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 1L11 11M1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <strong class="alert__title">É isso aí!</strong>
+            <p class="alert__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur commodi odio maiores accusamus
+              aspernatur
+              consequatur ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis
+              labore.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Atividade Objetiva -->
+        <div class="activity-card activity-card--objective" id="objective-activity">
+          <div class="activity-card__header">
+            <span class="activity-card__icon-wrapper">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path
+                  d="M12 13C12.2833 13 12.5292 12.8958 12.7375 12.6875C12.9458 12.4792 13.05 12.2333 13.05 11.95C13.05 11.6667 12.9458 11.4208 12.7375 11.2125C12.5292 11.0042 12.2833 10.9 12 10.9C11.7167 10.9 11.4708 11.0042 11.2625 11.2125C11.0542 11.4208 10.95 11.6667 10.95 11.95C10.95 12.2333 11.0542 12.4792 11.2625 12.6875C11.4708 12.8958 11.7167 13 12 13ZM11.25 9.8H12.75C12.75 9.31667 12.8 8.9625 12.9 8.7375C13 8.5125 13.2333 8.21667 13.6 7.85C14.1 7.35 14.4333 6.94583 14.6 6.6375C14.7667 6.32917 14.85 5.96667 14.85 5.55C14.85 4.8 14.5875 4.1875 14.0625 3.7125C13.5375 3.2375 12.85 3 12 3C11.3167 3 10.7208 3.19167 10.2125 3.575C9.70417 3.95833 9.35 4.46667 9.15 5.1L10.5 5.65C10.65 5.23333 10.8542 4.92083 11.1125 4.7125C11.3708 4.50417 11.6667 4.4 12 4.4C12.4 4.4 12.725 4.5125 12.975 4.7375C13.225 4.9625 13.35 5.26667 13.35 5.65C13.35 5.88333 13.2833 6.10417 13.15 6.3125C13.0167 6.52083 12.7833 6.78333 12.45 7.1C11.9 7.58333 11.5625 7.9625 11.4375 8.2375C11.3125 8.5125 11.25 9.03333 11.25 9.8ZM6 16C5.45 16 4.97917 15.8042 4.5875 15.4125C4.19583 15.0208 4 14.55 4 14V2C4 1.45 4.19583 0.979167 4.5875 0.5875C4.97917 0.195833 5.45 0 6 0H18C18.55 0 19.0208 0.195833 19.4125 0.5875C19.8042 0.979167 20 1.45 20 2V14C20 14.55 19.8042 15.0208 19.4125 15.4125C19.0208 15.8042 18.55 16 18 16H6ZM2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4H2V18H16V20H2Z"
+                  fill="currentColor" />
               </svg>
             </span>
-          </summary>
-          <div class="faq-item__panel" id="faq-answer-2">
-            <div class="faq-item__content">
-              <p class="faq-item__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                Aliquet sit amet est placerat in. Non sodales neque sodales ut etiam sit amet nisl purus.
+            <div class="activity-card__header-content">
+              <h3 class="activity-card__title">Atividade Objetiva</h3>
+              <p class="activity-card__description">
+                It is a long established fact that a reader will be distracted by the readable content of a page.
               </p>
             </div>
           </div>
-        </details>
 
-        <details class="faq-item" name="faq" id="faq-item-3">
-          <summary class="faq-item__trigger">
-            <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.</span>
-            <span class="faq-item__icon-wrapper">
-              <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-item__panel" id="faq-answer-3">
-            <div class="faq-item__content">
-              <p class="faq-item__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                Aliquet sit amet est placerat in. Non sodales neque sodales ut etiam sit amet nisl purus.
-              </p>
-            </div>
-          </div>
-        </details>
+          <div class="activity-card__body">
+            <fieldset class="objective-fieldset">
+              <legend class="sr-only">Opções de resposta para a atividade objetiva</legend>
+              <div class="objective-options">
 
-        <details class="faq-item" name="faq" id="faq-item-4">
-          <summary class="faq-item__trigger">
-            <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.</span>
-            <span class="faq-item__icon-wrapper">
-              <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-item__panel" id="faq-answer-4">
-            <div class="faq-item__content">
-              <p class="faq-item__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                Aliquet sit amet est placerat in. Non sodales neque sodales ut etiam sit amet nisl purus.
-              </p>
-            </div>
+                <label class="objective-option" for="opt-a">
+                  <input type="checkbox" id="opt-a" class="objective-option__input" value="A">
+                  <span class="objective-option__checkbox-ui"></span>
+                  <span class="objective-option__text">A) Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry.</span>
+                </label>
+
+                <label class="objective-option" for="opt-b">
+                  <input type="checkbox" id="opt-b" class="objective-option__input" value="B">
+                  <span class="objective-option__checkbox-ui"></span>
+                  <span class="objective-option__text">B) Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry.</span>
+                </label>
+
+                <label class="objective-option" for="opt-c">
+                  <input type="checkbox" id="opt-c" class="objective-option__input" value="C">
+                  <span class="objective-option__checkbox-ui"></span>
+                  <span class="objective-option__text">C) Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry.</span>
+                </label>
+
+                <label class="objective-option" for="opt-d">
+                  <input type="checkbox" id="opt-d" class="objective-option__input" value="D">
+                  <span class="objective-option__checkbox-ui"></span>
+                  <span class="objective-option__text">D) Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry.</span>
+                </label>
+
+              </div>
+            </fieldset>
           </div>
-        </details>
+
+          <div class="activity-card__footer">
+            <button class="activity-card__btn activity-card__btn--submit" id="objective-submit">Responder</button>
+            <button class="activity-card__btn activity-card__btn--edit" id="objective-edit">Alterar</button>
+          </div>
+
+          <div class="alert alert--warning" id="objective-feedback">
+            <button class="alert__close" id="objective-feedback-close" aria-label="Fechar feedback">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 1L11 11M1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <strong class="alert__title">Tente novamente!</strong>
+            <p class="alert__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur commodi odio maiores accusamus
+              aspernatur
+              consequatur ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis
+              labore.
+            </p>
+          </div>
+
+        </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="faq-section">
+      <div class="faq-section__container container">
+
+        <div class="faq-section__header">
+          <h2 class="faq-section__title">Perguntas frequentes</h2>
+          <p class="faq-section__subtitle">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <details class="faq-item" name="faq" open id="faq-item-1">
+            <summary class="faq-item__trigger">
+              <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
+                industry.</span>
+              <span class="faq-item__icon-wrapper">
+                <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 7L6 2L11 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-item__panel" id="faq-answer-1">
+              <div class="faq-item__content">
+                <p class="faq-item__text">
+                  It is a long established fact that a reader will be distracted by the readable content of a page when
+                  looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                  distribution
+                  of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq" id="faq-item-2">
+            <summary class="faq-item__trigger">
+              <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
+                industry.</span>
+              <span class="faq-item__icon-wrapper">
+                <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-item__panel" id="faq-answer-2">
+              <div class="faq-item__content">
+                <p class="faq-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+                  Aliquet sit amet est placerat in. Non sodales neque sodales ut etiam sit amet nisl purus.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq" id="faq-item-3">
+            <summary class="faq-item__trigger">
+              <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
+                industry.</span>
+              <span class="faq-item__icon-wrapper">
+                <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-item__panel" id="faq-answer-3">
+              <div class="faq-item__content">
+                <p class="faq-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+                  Aliquet sit amet est placerat in. Non sodales neque sodales ut etiam sit amet nisl purus.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq" id="faq-item-4">
+            <summary class="faq-item__trigger">
+              <span class="faq-item__question">Lorem ipsum is simply dummy text of the printing and typesetting
+                industry.</span>
+              <span class="faq-item__icon-wrapper">
+                <svg class="faq-item__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-item__panel" id="faq-answer-4">
+              <div class="faq-item__content">
+                <p class="faq-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+                  Aliquet sit amet est placerat in. Non sodales neque sodales ut etiam sit amet nisl purus.
+                </p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
@@ -583,8 +578,8 @@
     </div>
   </footer>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper JS (Local) -->
+  <script src="../js/swiper-bundle.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
 
