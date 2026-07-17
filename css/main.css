@@ -439,7 +439,7 @@ body {
 }
 
 /* Aplica a altura do figma apenas quando o alerta de feedback estiver visível na tela */
-.activity-card--objective:has(.activity-feedback:not([style*="display: none"]):not(.hidden)) {
+.activity-card--objective:has(.alert:not([style*="display: none"]):not(.hidden)) {
   min-height: 669.5px;
 }
 
@@ -476,10 +476,7 @@ body {
   margin-top: 0;
 }
 
-.activity-card--objective .activity-feedback,
-.activity-card--discursive .activity-feedback {
-  margin-top: 0;
-}
+
 
 .activity-card__header {
   display: flex;
@@ -721,111 +718,93 @@ body {
   cursor: not-allowed;
 }
 
-/* Feedback Box (Alertas de acerto/erro) */
-.activity-feedback {
+/* ==========================================================================
+   Component: Alert (Alertas de Feedback)
+   ========================================================================== */
+.alert {
   position: relative;
-  padding: 24px;
-  border-radius: 8px;
-  margin-top: 2rem;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-primary);
-  animation: feedbackFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: alertFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-@keyframes feedbackFadeIn {
+/* Contextual spacing/layout override when alert is used inside an activity card */
+.activity-card .alert {
+  max-width: 894px;
+}
+
+@keyframes alertFadeIn {
   from {
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.activity-feedback--warning {
+/* Alert Modifier: Warning (Aviso/Erro) */
+.alert--warning {
   background-color: #FFF9C4;
   color: #713F12;
-  width: 100%;
-  max-width: 894px;
   min-height: 121.5px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
   gap: 10.88px;
   padding: 16px 24px 24px 24px;
 }
 
-.activity-feedback--warning .activity-feedback__title {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0px;
-  vertical-align: middle;
+.alert--warning .alert__title {
   color: #713F12;
-  margin-bottom: 0;
 }
 
-.activity-feedback--warning .activity-feedback__text {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22.75px;
-  letter-spacing: 0px;
-  vertical-align: middle;
+.alert--warning .alert__text {
   color: #713F12E5;
 }
 
-.activity-feedback--success {
+/* Alert Modifier: Success (Sucesso) */
+.alert--success {
   background-color: #E8F5E9;
   border: 1px solid #DCFCE7;
   color: #14532D;
-  width: 100%;
-  max-width: 894px;
   min-height: 111.5px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
   gap: 6.88px;
   padding: 16px;
 }
 
-.activity-feedback--success .activity-feedback__title {
+.alert--success .alert__title {
+  color: #14532D;
+}
+
+.alert--success .alert__text {
+  color: #166534;
+}
+
+/* Inner elements */
+.alert__title {
+  display: block;
   font-family: var(--font-primary);
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
-  color: #14532D;
   margin-bottom: 0;
 }
 
-.activity-feedback--success .activity-feedback__text {
+.alert__text {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 14px;
   line-height: 22.75px;
   letter-spacing: 0px;
   vertical-align: middle;
-  color: #166534;
-}
-
-.activity-feedback__title {
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.activity-feedback__text {
-  font-size: 14px;
-  line-height: 1.5;
   margin: 0;
 }
 
-.activity-feedback__close {
+.alert__close {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -841,7 +820,7 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.activity-feedback__close:hover {
+.alert__close:hover {
   opacity: 1;
 }
 
@@ -882,13 +861,13 @@ body {
     width: 100%;
   }
 
-  .activity-feedback--warning {
+  .alert--warning {
     min-height: auto;
     padding: 16px;
     gap: 8px;
   }
 
-  .activity-feedback--success {
+  .alert--success {
     min-height: auto;
   }
 }
