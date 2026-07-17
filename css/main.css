@@ -611,9 +611,9 @@ body {
 }
 
 .interactive-card__btn:hover {
-  background-color: #F9FAFB;
-  border-color: #D1D5DB;
-  color: #0F172A;
+  background-color: #0C0A08;
+  border-color: #0C0A08;
+  color: #FFFFFF;
 }
 
 .interactive-card--expanded .interactive-card__btn {
@@ -638,8 +638,9 @@ body {
 }
 
 .interactive-card--expanded .interactive-card__btn:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: #9CA3AF;
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #0C0A08;
 }
 
 @media (max-width: 1024px) {
