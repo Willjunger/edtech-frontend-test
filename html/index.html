@@ -65,12 +65,16 @@
 
         <div class="video-section__player-wrapper">
           <div class="video-player" id="youtube-player-container">
-
-            <iframe width="1337" height="752" src="https://www.youtube.com/embed/DeQ9CgfPgtI"
-              title="MUNDO LINDO | Os lugares mais bonitos do planeta" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            <button class="video-player__cover" id="video-play-trigger" aria-label="Reproduzir vídeo explicativo: MUNDO LINDO">
+              <img src="../assets/Container.png" alt="Capa do vídeo com mockup do sistema" class="video-player__thumbnail">
+              <div class="video-player__overlay" aria-hidden="true">
+                <div class="video-player__play-button">
+                  <svg class="video-player__play-icon" width="13.75" height="17.5" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 17.5V0L13.75 8.75L0 17.5ZM2.5 12.9375L9.0625 8.75L2.5 4.5625V12.9375Z" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
 

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDiscursiveActivity();
   initObjectiveActivity();
   initAudioPlayer();
+  initVideoPlayer();
 });
 
 /**
@@ -511,4 +512,32 @@ function initAudioPlayer() {
       });
     });
   }
+}
+
+/**
+ * Inicializa o player de vídeo do YouTube
+ */
+function initVideoPlayer() {
+  const trigger = document.getElementById('video-play-trigger');
+  const container = document.getElementById('youtube-player-container');
+
+  if (!trigger || !container) return;
+
+  trigger.addEventListener('click', () => {
+    const videoId = 'DeQ9CgfPgtI';
+
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('width', '100%');
+    iframe.setAttribute('height', '100%');
+    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
+    iframe.setAttribute('title', 'MUNDO LINDO | Os lugares mais bonitos do planeta');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('allowfullscreen', 'true');
+
+    container.innerHTML = '';
+    container.appendChild(iframe);
+
+    iframe.focus();
+  });
 }
