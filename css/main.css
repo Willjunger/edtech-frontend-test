@@ -159,6 +159,8 @@ details summary:focus-visible {
   color: #9CA3AF;
   margin-left: 2rem;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 24px;
   max-width: 576px;
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -2128,4 +2130,44 @@ details summary:focus-visible {
 .audio-player__volume-slider:focus-visible::-moz-range-thumb {
   transform: scale(1.25);
   border-color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Scroll-Triggered Reveal Animations
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal--slide-up {
+  transform: translateY(32px);
+}
+
+.reveal--slide-left {
+  transform: translateX(-32px);
+}
+
+.reveal--slide-right {
+  transform: translateX(32px);
+}
+
+.reveal--fade-in {
+  /* Only opacity is animated */
+}
+
+/* Estado Visível / Ativo */
+.reveal--visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

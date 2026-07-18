@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initObjectiveActivity();
   initAudioPlayer();
   initVideoPlayer();
+  initScrollAnimations();
 });
 
 /**
@@ -540,4 +541,43 @@ function initVideoPlayer() {
 
     iframe.focus();
   });
+}
+
+/**
+ * Inicializa as animações de aparecimento ao rolar a página (scroll-triggered).
+ */
+function initScrollAnimations() {
+  const revealElements = document.querySelectorAll('.reveal');
+
+  if (!revealElements.length) return;
+
+  // Se o navegador não suportar IntersectionObserver, exibe todos os elementos imediatamente
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach(el => el.classList.add('reveal--visible'));
+    return;
+  }
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const delay = element.getAttribute('data-delay');
+
+        if (delay) {
+          element.style.transitionDelay = delay;
+        }
+
+        element.classList.add('reveal--visible');
+        observer.unobserve(element);
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => observer.observe(el));
 }
