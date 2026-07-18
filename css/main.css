@@ -68,6 +68,28 @@ details summary:focus-visible {
 /* ==========================================================================
    Hero Section (Topo / Destaque)
    ========================================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRightScale {
+  from {
+    opacity: 0;
+    transform: translateX(32px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
 .hero {
   position: relative;
   background-color: var(--color-bg-dark);
@@ -109,6 +131,8 @@ details summary:focus-visible {
   color: var(--color-text-light);
   margin-bottom: 1.5rem;
   padding-left: 2rem;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
 }
 
 .hero__title::before {
@@ -137,6 +161,8 @@ details summary:focus-visible {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   padding-left: 24px;
   max-width: 576px;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.25s;
 }
 
 .hero__cta {
@@ -156,6 +182,8 @@ details summary:focus-visible {
     transform 0.2s ease,
     box-shadow 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.4s;
 }
 
 .hero__cta-icon {
@@ -180,6 +208,19 @@ details summary:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeInRightScale 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.55s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title,
+  .hero__description,
+  .hero__cta,
+  .hero__graphic {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .hero__graphic-img {
